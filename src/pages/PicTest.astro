@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+
+const pageTitle = "Image Test";
+import testImage from '../assets/post-1.jpg';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Testing image import ...</h2>
+  <div class="image-container">
+    <Image src={ testImage } alt="Test image" class="image-item" />
+  </div>
+</BaseLayout>
+
+<style>
+  .image-container {
+    width: 75%;
+  }
+
+  .image-item {
+    max-width: 100%;
+  }
+</style>
